@@ -1,0 +1,14 @@
+one:
+  content: "First content"
+  dead: <%= Date.today %>
+  user: daichi
+
+two:
+  content: "Second content"
+  dead: <%= Date.tomorrow %>
+  user: daichi
+
+three:
+  content: "Other user's content"
+  dead: <%= Date.tomorrow %>
+  user: other

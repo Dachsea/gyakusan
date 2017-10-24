@@ -25,9 +25,10 @@ ja:
         unconfirmed_email: 
         unlock_token: "ロック解除用のトークン"
         updated_at: 
+        name: "名前"
     models:
       user: "ユーザ"
-  devise:
+  users:
     confirmations:
       confirmed: "アカウントを登録しました。"
       new:
@@ -134,3 +135,7 @@ ja:
       not_saved:
         one: "エラーが発生したため %{resource} は保存されませんでした。"
         other: "%{count} 件のエラーが発生したため %{resource} は保存されませんでした。"
+  events:
+    columns:
+      content: "イベント名"
+      dead: "期日"

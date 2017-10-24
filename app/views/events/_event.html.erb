@@ -1,0 +1,12 @@
+<% today = Date.today %>
+<li>
+  <a href="<%= event_path(event) %>">
+  イベント名: <%= event.content %><br>
+  期日： <%= event.dead %><br>
+  <% if event.dead >= today %>
+    あと： <%= (event.dead - today).to_i %>日
+  <% else %>
+    経過： <%= (today - event.dead).to_i %>日
+  <% end %>
+  </a>
+</li>

@@ -1,0 +1,17 @@
+<h1>Events#show</h1>
+<p>Find me in app/views/events/show.html.erb</p>
+
+<% unless @event.nil? %>
+  <p>イベント名:
+  <%= @event.content %></p>
+
+  <p>期日:
+  <%= @event.dead %></p>
+
+  <p>あと:
+  <%= (@event.dead - Date.today).to_i %>日</p>
+
+  <%= link_to "編集", edit_event_path %>
+<% else %>
+  <p>イベントが存在しません</p>
+<% end -%>

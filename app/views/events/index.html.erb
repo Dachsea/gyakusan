@@ -1,0 +1,18 @@
+<% provide(:url, events_path) %>
+<% provide(:button_text, "追加") %>
+
+<h1><%= current_user.name %></h1>
+<p>Find me in app/views/events/index.html.erb</p>
+
+<% if signed_in? %>
+<ul>
+  <%= render @events %>
+</ul>
+
+<aside>
+  <%= render 'form' %>
+</aside>
+<% else %>
+<p>ログインしてください</p>
+<%= link_to "ログイン", new_user_session_path %>
+<% end %>

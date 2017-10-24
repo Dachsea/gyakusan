@@ -62,3 +62,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #Added
 gem 'devise'
 gem 'devise-i18n'
+gem 'config'
+gem 'will_paginate',           '3.1.5'
+gem 'faker',          '1.7.3'

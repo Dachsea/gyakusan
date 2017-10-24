@@ -1,0 +1,11 @@
+<%= form_for(@event, url: yield(:url)) do |f| %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+
+  <%= f.label :content %>
+  <%= f.text_field :content %><br>
+
+  <%= f.label :dead %>
+  <%= f.date_field :dead, value: Date.tomorrow %>
+
+  <%= f.submit yield(:button_text) %>
+<% end %>

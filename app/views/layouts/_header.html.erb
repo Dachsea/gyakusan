@@ -1,0 +1,14 @@
+<header class="navbar">
+  <div class="container">
+    <%= link_to "逆算カレンダー", root_path, id: "logo" %>
+    <nav>
+      <ul class="nav">
+        <li><%= link_to "イベント追加", new_event_path %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to "プロフィール", current_user %></li>
+          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>
