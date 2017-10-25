@@ -8,9 +8,7 @@
   <p>期日:
   <%= @event.dead %></p>
 
-  <p>あと:
-  <%= (@event.dead - Date.today).to_i %>日</p>
-
+  <p><%= event_dead_changer(@event) %></p>
   <%= link_to "編集", edit_event_path %>
 <% else %>
   <p>イベントが存在しません</p>
