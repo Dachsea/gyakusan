@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!
-  before_action :correct_user, only: [:edit, :update]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   def index
     if user_signed_in?
@@ -41,6 +41,9 @@ class EventsController < ApplicationController
   end
 
   def destroy
+    @event.destroy
+    flash[:success] = "イベントを削除しました"
+    redirect_to root_url
   end
 
   private
